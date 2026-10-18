@@ -61,15 +61,18 @@ Thus the overall signature is:
 // what do you expect the new signature to be?
 // Try it and see!
 let doSomething_v2 f x =
-   let y = f (x + 1)
+   let y = f (x + 1.)
    "hello" + y
+// val doSomething_v2 : f:(float -> string) -> x:float -> string
 
 // Exercise: if you change ("hello"+y) to ("hello"=y) below,
 // what do you expect the new signature to be?
 // Try it and see!
 let doSomething_v3 f x =
    let y = f (x + 1)
-   "hello" + y
+   "hello" = y
+// val doSomething_v3 : f:(int -> string) -> x:int -> bool
+
 
 // ===============================================
 // Part 2: type inference in format strings
@@ -83,7 +86,7 @@ let printName aName =
 // What is the type of "aName" now?
 // Try it and see!
 let printName_v2 aName =
-    printfn "Hello %s" aName
+    printfn "Hello %i" aName
 
 // test
 let name = "Alice"

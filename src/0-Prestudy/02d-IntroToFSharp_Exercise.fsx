@@ -26,11 +26,11 @@ just to get you started on how this works.
 // Question: Define a function that multiplies its argument by two.
 // What is its signature?
 
-let multipliedByTwo x = ??
+let multipliedByTwo x = x * 2
 
 // Can you make a similar function with floats?
 // What is its signature?
-let floatMultipliedByTwo x = ??
+let floatMultipliedByTwo x = x * 2.
 
 
 // =============================================
@@ -39,7 +39,8 @@ let floatMultipliedByTwo x = ??
 // If you pass in "Alice" as the name,
 // the result should be "Hello Alice".
 
-let sayHello aName = ??
+let sayHello aName =
+    sprintf "Hello %s" aName
 
 // What is its signature?
 
@@ -53,7 +54,8 @@ sayHello "Alice"
 // If you pass in "Hello" as the greeting and
 // "Alice" as the name, the result should be "Hello Alice".
 
-let sayGreeting ?? ?? = ??
+let sayGreeting greeting name =
+    sprintf "%s %s" greeting name
 
 // What is the signature of this function?
 
@@ -69,7 +71,8 @@ sayGreeting "Hello" "Alice"  // "Hello Alice"
 //
 // TIP you may need to use "float" to convert from ints to floats
 
-let average int1 int2  = ??
+let average int1 int2  =
+    float (int1 + int2) / 2.
 
 // What is its signature?
 
